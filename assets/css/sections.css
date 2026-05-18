@@ -305,6 +305,7 @@ a.appt-value:hover { text-decoration: underline; }
   .hero-p    { margin-left: auto; margin-right: auto; }
   .hero-btns { justify-content: center; }
   .hero-trust-badges { justify-content: center; }
+  .hero-img-card { overflow: hidden; }
   .hero-badge-tl { top: 12px; right: 12px; }
   .hero-badge-bl { bottom: 12px; left: 12px; }
   .hero-photo    { max-height: 380px; }
@@ -312,6 +313,7 @@ a.appt-value:hover { text-decoration: underline; }
   .about { padding: 72px 0; }
   .about-grid  { grid-template-columns: 1fr; gap: 40px; }
   .about-stats { justify-content: center; gap: 32px; }
+  .about-img-wrap { overflow: hidden; }
   .iso-badge   { right: 12px; bottom: 12px; }
   .about-img   { height: 340px; }
   /* Services */
@@ -344,6 +346,8 @@ a.appt-value:hover { text-decoration: underline; }
   .hero-btns .btn-primary,
   .hero-btns .btn-outline { width: 100%; justify-content: center; }
   .hero-photo { max-height: 280px; }
+  .hero-badge-tl { top: 10px; right: 10px; }
+  .hero-badge-bl { bottom: 10px; left: 10px; }
   .hero-badge-tl, .hero-badge-bl { padding: 8px 12px; gap: 8px; }
   .badge-num  { font-size: 1.1rem; }
   .badge-icon { width: 32px; height: 32px; }
@@ -379,6 +383,8 @@ a.appt-value:hover { text-decoration: underline; }
 
 @media (max-width: 420px) {
   .hero-h1 { font-size: 1.75rem; }
+  .hero-badge-tl { top: 8px; right: 8px; }
+  .hero-badge-bl { bottom: 8px; left: 8px; }
   .services-grid { grid-template-columns: 1fr; }
   .svc-card      { padding: 18px 14px; }
   .about-stats   { gap: 16px; }
