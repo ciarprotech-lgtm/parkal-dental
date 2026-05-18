@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Parkal Dental Centre - Comprehensive Dental Care with Modern Technology. Expert dental treatments in Parkal, Telangana."
+    />
+    <meta
+      name="keywords"
+      content="dental clinic, dental implants, braces, smile designing, teeth whitening, Parkal, dentist, Telangana"
+    />
+    <title>Parkal Dental Centre | Advanced Dental Care</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons & Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
+    <link rel="apple-touch-icon" href="images/logo.jpeg" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loader">
+      <div class="loader-inner">
+        <div class="loader-logo-wrap">
+          <img
+            src="images/logo.jpeg"
+            alt="Parkal Dental Centre Logo"
+            class="loader-logo-img"
+          />
+          <span>Parkal <em>Dental</em> Centre</span>
+        </div>
+        <p class="loader-tagline">Advanced Dental Care · Chennai</p>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+        <div class="loader-dots"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-bar" id="scrollBar"></div>
+  </body>
+</html>
+
+<!-- ═══════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="#home" class="nav-brand">
+      <img
+        src="images/logo.jpeg"
+        alt="Parkal Dental Centre Logo"
+        class="nav-logo-img"
+      />
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-item active">Home</a></li>
+      <li><a href="#about" class="nav-item">About</a></li>
+      <li><a href="#services" class="nav-item">Services</a></li>
+      <li><a href="#why" class="nav-item">Why Us</a></li>
+      <li><a href="#testimonials" class="nav-item">Reviews</a></li>
+      <li><a href="#contact" class="nav-item">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <a href="#contact" class="btn-book">Book Appointment</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav Drawer -->
+<div class="mob-overlay" id="mobOverlay"></div>
+<div class="mob-drawer" id="mobDrawer">
+  <div class="mob-drawer-head">
+    <img
+      src="images/logo.jpeg"
+      alt="Parkal Dental Centre"
+      class="mob-drawer-logo"
+    />
+    <div class="mob-drawer-brand">
+      <span class="mob-brand-name">Parkal <em>Dental</em></span>
+      <span class="mob-brand-sub">Centre</span>
+    </div>
+    <button class="mob-close" id="mobClose" aria-label="Close menu">
+      <i class="fas fa-xmark"></i>
+    </button>
+  </div>
+  <nav class="mob-nav">
+    <a href="#home" class="mob-nav-item active"
+      ><i class="fas fa-house"></i><span>Home</span></a
+    >
+    <a href="#about" class="mob-nav-item"
+      ><i class="fas fa-circle-info"></i><span>About</span></a
+    >
+    <a href="#services" class="mob-nav-item"
+      ><i class="fas fa-tooth"></i><span>Services</span></a
+    >
+    <a href="#why" class="mob-nav-item"
+      ><i class="fas fa-star"></i><span>Why Us</span></a
+    >
+    <a href="#testimonials" class="mob-nav-item"
+      ><i class="fas fa-comments"></i><span>Reviews</span></a
+    >
+    <a href="#contact" class="mob-nav-item"
+      ><i class="fas fa-location-dot"></i><span>Contact</span></a
+    >
+  </nav>
+  <div class="mob-drawer-footer">
+    <a href="tel:04423644994" class="mob-call-btn"
+      ><i class="fas fa-phone"></i> Call Us Now</a
+    >
+    <a
+      href="https://wa.me/914423644994"
+      class="mob-wa-btn"
+      target="_blank"
+      rel="noopener"
+      ><i class="fab fa-whatsapp"></i> WhatsApp</a
+    >
+    <p class="mob-hours">
+      <i class="fas fa-clock"></i> Mon–Sat: 9 AM – 8 PM &nbsp;|&nbsp; Sun: 10 AM
+      – 6 PM
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-wrap">
+    <div class="hero-left">
+      <div class="hero-trust-badges">
+        <span class="trust-dot"></span> Expert Specialists
+        <span class="trust-dot teal"></span> Modern Equipment
+        <span class="trust-dot cyan"></span> Personal Care
+      </div>
+      <h1 class="hero-h1">
+        Comprehensive <span class="cyan-text">Dental<br />Care</span> in the
+        Heart<br />of Chennai.
+      </h1>
+      <p class="hero-p">
+        With over 13 years of clinical experience, Parkal Dental Centre delivers
+        affordable, quality oral care in the most pleasing and hygienic
+        environment possible. We promote long-term patient relationships through
+        education and informed consent.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Book Your Appointment</a>
+        <a href="#about" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-card">
+        <img
+          src="images/hero-image.jpg"
+          alt="Happy dental patients at Parkal Dental Centre"
+          class="hero-photo"
+        />
+        <div class="hero-badge-tl">
+          <video
+            class="badge-icon"
+            src="images/happy-patients.webm"
+            autoplay
+            loop
+            muted
+            playsinline
+            aria-hidden="true"
+          ></video>
+          <div class="badge-text">
+            <span class="badge-num green-text">5000+</span>
+            <span class="badge-lbl">Happy Patients</span>
+          </div>
+        </div>
+        <div class="hero-badge-bl">
+          <video
+            class="badge-icon"
+            src="images/years-exp.webm"
+            autoplay
+            loop
+            muted
+            playsinline
+            aria-hidden="true"
+          ></video>
+          <div class="badge-text">
+            <span class="badge-num green-text">13+</span>
+            <span class="badge-lbl">Years Experience</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="sec-h2">
+          From Humble Beginnings to <span class="cyan-text">Excellence</span>
+        </h2>
+        <div class="sec-line"></div>
+        <p>
+          Parkal Dental Centre is a touchstone initiative in dentistry with over
+          13 years of clinical experience. Led by
+          <strong>Dr. T. Saravanakumar, M.D.S</strong>, our clinic is committed
+          to providing affordable and quality oral care in the most pleasing and
+          hygienic environment possible.
+        </p>
+        <p>
+          With top-notch equipment and techniques, we ensure every visit is
+          friendly and productive. We promote long-term patient relationships
+          through education and informed consent, making sure you understand
+          every step of your treatment.
+        </p>
+        <p>
+          Every patient who walks through our doors receives the same attention
+          and care that built our reputation — comprehensive treatment plans,
+          gentle procedures, and a genuine commitment to your oral health and
+          beautiful smile.
+        </p>
+        <div class="about-stats">
+          <div class="astat">
+            <div class="astat-icon"><i class="fas fa-chair"></i></div>
+            <span class="astat-num green-text" data-count="8">0</span>
+            <span class="astat-lbl">Dental Chairs</span>
+          </div>
+          <div class="astat">
+            <div class="astat-icon"><i class="fas fa-user-doctor"></i></div>
+            <span class="astat-num green-text" data-count="12">0</span>
+            <span class="astat-lbl">Specialists</span>
+          </div>
+          <div class="astat">
+            <div class="astat-icon"><i class="fas fa-truck-medical"></i></div>
+            <span class="astat-num green-text">24/7</span>
+            <span class="astat-lbl">Emergency Care</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=700&q=85"
+            alt="Modern dental clinic interior"
+            class="about-img"
+          />
+          <div class="iso-badge">
+            <strong>ISO</strong><span>Certified Clinic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="sec-header">
+      <h2 class="sec-h2">
+        Our <span class="cyan-text">Treatments</span> &amp; Services
+      </h2>
+      <div class="sec-line center"></div>
+      <p class="sec-sub">
+        Comprehensive dental care with modern technology and personalized
+        treatment plans designed to give you the healthy, beautiful smile you
+        deserve.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card featured">
+        <div class="svc-icon cyan-bg"><i class="fas fa-wave-square"></i></div>
+        <h3 class="svc-title cyan-text">Root Canal Treatments</h3>
+        <p>Advanced endodontic therapy using latest techniques</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3 class="svc-title">Filling &amp; Restorative Treatment</h3>
+        <p>Composite and ceramic restorations for natural-looking results</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-tooth"></i></div>
+        <h3 class="svc-title">Implants</h3>
+        <p>Titanium implants for permanent tooth replacement</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-crown"></i></div>
+        <h3 class="svc-title">Crowns, Bridges &amp; Inlays</h3>
+        <p>Custom prosthetics for complete smile restoration</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-bolt"></i></div>
+        <h3 class="svc-title">Laser Dentistry</h3>
+        <p>Minimally invasive treatments with advanced laser technology</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+        <h3 class="svc-title">Cosmetic Dentistry</h3>
+        <p>Veneers, whitening, and smile makeovers</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-triangle-exclamation"></i></div>
+        <h3 class="svc-title">Wisdom Teeth</h3>
+        <p>Safe extraction and management of wisdom teeth</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-heart"></i></div>
+        <h3 class="svc-title">Periodontal Diseases</h3>
+        <p>Comprehensive gum disease treatment and prevention</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-shield-halved"></i></div>
+        <h3 class="svc-title">Sensitive Teeth</h3>
+        <p>Specialized care for tooth sensitivity issues</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-stethoscope"></i></div>
+        <h3 class="svc-title">Essential Care</h3>
+        <p>Routine cleanings, checkups, and preventive care</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-droplet"></i></div>
+        <h3 class="svc-title">Tooth Decay &amp; Fluoride</h3>
+        <p>Cavity prevention and fluoride treatments</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-face-smile"></i></div>
+        <h3 class="svc-title">Pediatric Dentistry</h3>
+        <p>Gentle dental care for children and teens</p>
+      </div>
+    </div>
+    <div class="svc-cta">
+      <p>
+        Need a specific treatment not listed? Contact us for personalized care.
+      </p>
+      <div class="svc-cta-btns">
+        <a href="#contact" class="btn-primary">Schedule Consultation</a>
+        <a href="#services" class="btn-outline">View All Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+         WHY CHOOSE US
+    ═══════════════════════════════════════ -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="sec-header">
+      <h2 class="sec-h2">
+        Why Choose <span class="red-text">Our Clinic</span>?
+      </h2>
+      <div class="sec-line center"></div>
+      <p class="sec-sub">
+        We combine expertise, technology, and compassionate care to deliver
+        exceptional dental experiences that exceed your expectations.
+      </p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon icon-soft"><i class="fas fa-award"></i></div>
+        <h3>Experienced Specialists</h3>
+        <p>
+          Board-certified specialists with over 15 years of combined experience
+          in advanced dental procedures.
+        </p>
+      </div>
+      <div class="why-card why-featured">
+        <div class="why-icon icon-red"><i class="fas fa-microscope"></i></div>
+        <h3 class="red-text">Modern Equipment</h3>
+        <p>
+          State-of-the-art technology including digital X-rays, intraoral
+          cameras, and laser therapy systems.
+        </p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon icon-light"><i class="fas fa-heart"></i></div>
+        <h3>Personalized Care</h3>
+        <p>
+          Individual treatment plans tailored to your specific needs,
+          preferences, and oral health goals.
+        </p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon icon-soft">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Continuous Learning</h3>
+        <p>
+          Our team regularly attends international conferences and training to
+          stay updated with latest techniques.
+        </p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon icon-light"><i class="fas fa-clock"></i></div>
+        <h3>Flexible Scheduling</h3>
+        <p>
+          Extended hours and emergency care to accommodate your busy lifestyle
+          and urgent dental needs.
+        </p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon icon-soft">
+          <i class="fas fa-shield-halved"></i>
+        </div>
+        <h3>Safety First</h3>
+        <p>
+          Strict sterilization protocols and international safety standards to
+          ensure your health and safety.
+        </p>
+      </div>
+    </div>
+    <div class="why-cta-banner">
+      <div class="why-cta-text">
+        <h3>Ready to Experience the Difference?</h3>
+        <p>
+          Join thousands of satisfied patients who trust us with their dental
+          care. Schedule your appointment today and discover what sets us apart.
+        </p>
+      </div>
+      <div class="why-cta-btns">
+        <a href="#contact" class="btn-primary">Book Consultation</a>
+        <a href="tel:04423644994" class="btn-outline">Call: 044-23644994</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="sec-header">
+      <h2 class="sec-h2">
+        What Our <span class="cyan-text">Patients</span> Say
+      </h2>
+      <div class="sec-line center"></div>
+      <p class="sec-sub">
+        Real experiences from real patients who have transformed their smiles
+        and improved their oral health with our comprehensive dental care.
+      </p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i>
+        </div>
+        <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+        <p>
+          "Exceptional care and modern facilities! The root canal treatment was
+          completely painless, and the staff made me feel comfortable
+          throughout. Highly recommend this clinic to anyone looking for quality
+          dental care in Parkal."
+        </p>
+        <div class="testi-footer">
+          <div class="testi-author">
+            <strong>Kavitha Rajan</strong><span>K.K.Nagar, Chennai</span>
+          </div>
+          <span class="testi-tag">Root Canal Treatment</span>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i>
+        </div>
+        <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+        <p>
+          "Got my dental implants done here and couldn't be happier with the
+          results. The process was smooth, professional, and the final outcome
+          looks completely natural. Worth every penny!"
+        </p>
+        <div class="testi-footer">
+          <div class="testi-author">
+            <strong>Murugan Selvam</strong
+            ><span>Porur, Chennai, Tamil Nadu</span>
+          </div>
+          <span class="testi-tag">Dental Implants</span>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i>
+        </div>
+        <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+        <p>
+          "Amazing cosmetic dentistry work! My smile makeover exceeded all
+          expectations. The team is knowledgeable, gentle, and truly cares about
+          patient satisfaction. The clinic's cleanliness and modern equipment
+          are impressive."
+        </p>
+        <div class="testi-footer">
+          <div class="testi-author">
+            <strong>Anitha Suresh</strong
+            ><span>Valasaravakkam, Chennai, Tamil Nadu</span>
+          </div>
+          <span class="testi-tag">Smile Makeover</span>
+        </div>
+      </div>
+    </div>
+    <div class="testi-social-proof">
+      <div class="proof-avatars">
+        <img
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&q=80"
+          alt="Patient"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&q=80"
+          alt="Patient"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&q=80"
+          alt="Patient"
+        />
+        <div class="proof-more">+2K</div>
+      </div>
+      <div class="proof-text">
+        <strong>5000+ Happy Patients</strong>
+        <span>Join our family of satisfied patients</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+         CONTACT + BOOKING
+    ═══════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="sec-header">
+      <h2 class="sec-h2">Visit Our <span class="cyan-text">Clinic</span></h2>
+      <div class="sec-line center"></div>
+      <p class="sec-sub">
+        Conveniently located in West K.K.Nagar, Chennai. Walk in or call us to
+        schedule your appointment today!
+      </p>
+    </div>
+    <div class="contact-grid">
+      <!-- Left: Info + Map -->
+      <div class="contact-left">
+        <div class="contact-info-grid">
+          <div class="cinfo-card">
+            <div class="cinfo-icon"><i class="fas fa-location-dot"></i></div>
+            <h4>Location</h4>
+            <p>
+              #3/2, SGS Vaishnavi Flats,<br />Vembuliamman Koil 1st Cross
+              Street,<br />Udhayam Colony, West K.K.Nagar,<br />Chennai – 600078
+            </p>
+          </div>
+          <div class="cinfo-card">
+            <div class="cinfo-icon"><i class="fas fa-phone"></i></div>
+            <h4>Phone</h4>
+            <p>044-23644994</p>
+          </div>
+          <div class="cinfo-card">
+            <div class="cinfo-icon"><i class="fas fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p>parkaldentalcentre@gmail.com</p>
+          </div>
+          <div class="cinfo-card">
+            <div class="cinfo-icon"><i class="fas fa-clock"></i></div>
+            <h4>Hours</h4>
+            <p>Mon–Sat: 9:00 AM – 8:00 PM<br />Sunday: 10:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+        <!-- Map Card -->
+        <div class="map-card">
+          <div class="map-pin-label">
+            <i class="fas fa-location-dot"></i> West K.K.Nagar, Chennai
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.861136719777!2d80.18660927474211!3d13.044509713276291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266d2994ec361%3A0xfc91ae7738d85c65!2sPARKAL%20DENTAL%20CLINIC.%20BRACES%20AND%20INVISALIGN%20CENTRE!5e0!3m2!1sen!2sin!4v1779089544600!5m2!1sen!2sin"
+            width="100%"
+            height="300"
+            style="
+              border: 0;
+              border-radius: 12px;
+              display: block;
+              margin-bottom: 16px;
+            "
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Parkal Dental Centre on Google Maps"
+          ></iframe>
+          <a
+            href="https://maps.google.com/?q=SGS+Vaishnavi+Flats+Vembuliamman+Koil+1st+Cross+Street+West+KK+Nagar+Chennai+600078"
+            target="_blank"
+            rel="noopener"
+            class="btn-map"
+            >Open in Google Maps</a
+          >
+        </div>
+      </div>
+      <!-- Right: Book Appointment -->
+      <div class="contact-right">
+        <div class="booking-card">
+          <h3>Book an Appointment</h3>
+          <p>
+            Ready to visit us? Reach out through any of the channels below and
+            we'll be happy to assist you.
+          </p>
+          <div class="appt-contact-list">
+            <div class="appt-contact-item">
+              <div class="appt-icon"><i class="fas fa-phone"></i></div>
+              <div class="appt-detail">
+                <span class="appt-label">Call Us</span
+                ><a href="tel:04423644994" class="appt-value">044-23644994</a>
+              </div>
+            </div>
+            <div class="appt-contact-item">
+              <div class="appt-icon"><i class="fas fa-envelope"></i></div>
+              <div class="appt-detail">
+                <span class="appt-label">Email Us</span
+                ><a
+                  href="mailto:parkaldentalcentre@gmail.com"
+                  class="appt-value"
+                  >parkaldentalcentre@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="appt-contact-item">
+              <div class="appt-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="appt-detail">
+                <span class="appt-label">WhatsApp</span
+                ><a
+                  href="https://wa.me/914423644994"
+                  target="_blank"
+                  rel="noopener"
+                  class="appt-value"
+                  >Chat with us</a
+                >
+              </div>
+            </div>
+            <div class="appt-contact-item">
+              <div class="appt-icon"><i class="fas fa-location-dot"></i></div>
+              <div class="appt-detail">
+                <span class="appt-label">Visit Us</span
+                ><span class="appt-value"
+                  >#3/2, SGS Vaishnavi Flats,<br />West K.K.Nagar, Chennai –
+                  600078</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="appt-cta-btns">
+            <a href="tel:04423644994" class="btn-book-submit"
+              ><i class="fas fa-phone"></i> Call Now</a
+            >
+            <a
+              href="https://wa.me/914423644994"
+              class="btn-wa"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-whatsapp"></i> WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo">
+              <img src="images/logo.jpeg" alt="Parkal Dental Centre Logo" class="footer-logo-img" />
+            </a>
+            <p>Your trusted dental care partner in Chennai, providing comprehensive treatments with modern technology and personalized care for over 13 years. Led by Dr. T. Saravanakumar, M.D.S.</p>
+            <div class="footer-socials">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Our Services</a></li>
+              <li><a href="#why">Meet Our Team</a></li>
+              <li><a href="#testimonials">Patient Reviews</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Popular Services</h4>
+            <ul>
+              <li><a href="#services">Root Canal Treatment</a></li>
+              <li><a href="#services">Dental Implants</a></li>
+              <li><a href="#services">Cosmetic Dentistry</a></li>
+              <li><a href="#services">Laser Dentistry</a></li>
+              <li><a href="#services">Periodontal Care</a></li>
+              <li><a href="#services">Emergency Care</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul class="footer-contact">
+              <li><i class="fas fa-location-dot"></i><span>#3/2, SGS Vaishnavi Flats,<br />West K.K.Nagar, Chennai – 600078</span></li>
+              <li><i class="fas fa-phone"></i><span>044-23644994</span></li>
+              <li><i class="fas fa-envelope"></i><span>parkaldentalcentre@gmail.com</span></li>
+              <li><i class="fas fa-clock"></i><span>Mon–Sat: 9:00 AM – 8:00 PM<br />Sunday: 10:00 AM – 6:00 PM</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Parkal Dental Centre. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/914423644994" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="wa-tip">Chat with us!</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="top-btn" id="topBtn" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/animations.js"></script>
+
+  </body>
+</html>

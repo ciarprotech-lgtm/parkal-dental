@@ -1,0 +1,134 @@
+/* ============================================================
+   BASE — Variables, Reset, Utilities, Buttons, Animations
+   ============================================================ */
+
+/* ── Variables ── */
+:root {
+  --red: #E8000E;
+  --red-dark: #C4000C;
+  --red-light: #FF2D38;
+  --red-soft: #FFF0F0;
+  --red-muted: #FFE0E1;
+  --charcoal: #2D2D2D;
+  --charcoal-mid: #444444;
+  --charcoal-light: #6B6B6B;
+  --white: #ffffff;
+  --bg: #FAFAFA;
+  --bg-white: #ffffff;
+  --bg-section: #FFF5F5;
+  --text-dark: #1E1E1E;
+  --text-body: #4A4A4A;
+  --text-muted: #8A8A8A;
+  --border: #E8E8E8;
+  --border-light: #F2F2F2;
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
+  --shadow-red: 0 4px 20px rgba(232,0,14,0.25);
+  --shadow-red-lg: 0 8px 32px rgba(232,0,14,0.35);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  --font: 'Inter', 'Poppins', sans-serif;
+  --nav-h: 82px;
+  --transition: all 0.25s ease;
+}
+
+/* Dark mode */
+body.dark {
+  --bg: #141414;
+  --bg-white: #1E1E1E;
+  --bg-section: #1A0A0A;
+  --text-dark: #F5F5F5;
+  --text-body: #AAAAAA;
+  --text-muted: #666666;
+  --border: #2E2E2E;
+  --border-light: #252525;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { border: none; background: none; font-family: inherit; cursor: none; }
+input, textarea, select { font-family: inherit; }
+
+/* ── Utilities ── */
+.container { max-width: 1440px; margin: 0 auto; padding: 0 48px; }
+.cyan-text { color: var(--red); }
+.green-text { color: var(--red); }
+.red-text { color: var(--red) !important; }
+
+.sec-h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800; color: var(--text-dark);
+  line-height: 1.2; margin-bottom: 12px;
+}
+.sec-line {
+  width: 48px; height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--red-dark));
+  border-radius: 2px; margin-bottom: 20px;
+}
+.sec-line.center { margin-left: auto; margin-right: auto; }
+.sec-sub {
+  font-size: 1rem; color: var(--text-body);
+  max-width: 620px; line-height: 1.7;
+}
+.sec-header { text-align: center; margin-bottom: 56px; }
+.sec-header .sec-sub { margin: 0 auto; }
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px; border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: #fff; font-size: 0.92rem; font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(232,0,14,0.35);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,0,14,0.45); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: var(--radius-full);
+  background: transparent; color: var(--red);
+  font-size: 0.92rem; font-weight: 600;
+  border: 1.5px solid var(--red);
+  transition: var(--transition);
+}
+.btn-outline:hover { background: var(--red); color: #fff; transform: translateY(-2px); }
+
+/* ── Animations ── */
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-left.visible { opacity: 1; transform: translateX(0); }
+.fade-right { opacity: 0; transform: translateX(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-right.visible { opacity: 1; transform: translateX(0); }
+
+/* Stagger delays */
+.d1  { transition-delay: 0.05s; }
+.d2  { transition-delay: 0.1s; }
+.d3  { transition-delay: 0.15s; }
+.d4  { transition-delay: 0.2s; }
+.d5  { transition-delay: 0.25s; }
+.d6  { transition-delay: 0.3s; }
+.d7  { transition-delay: 0.35s; }
+.d8  { transition-delay: 0.4s; }
+.d9  { transition-delay: 0.45s; }
+.d10 { transition-delay: 0.5s; }
+.d11 { transition-delay: 0.55s; }
+.d12 { transition-delay: 0.6s; }
