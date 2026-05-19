@@ -156,48 +156,255 @@ body.dark .why-cta-banner { background: linear-gradient(135deg, #1A0505, #200808
 .why-cta-text p  { font-size: 0.92rem; color: var(--text-body); max-width: 480px; line-height: 1.7; }
 .why-cta-btns    { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
 
-/* ── TESTIMONIALS ── */
-.testimonials { padding: 100px 0; background: var(--bg); }
-.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+/* ── TESTIMONIALS & CONTINUOUS FLOATING MARQUEE ── */
+.testimonials { padding: 100px 0; background: var(--bg); overflow: hidden; }
+
+.marquee-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 40px 0;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Beautiful fading masks on the left and right sides */
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+}
+
+/* Ensure masks are dark on dark mode */
+body.dark .marquee-container::before {
+  background: linear-gradient(to right, #141414 0%, transparent 100%);
+}
+body.dark .marquee-container::after {
+  background: linear-gradient(to left, #141414 0%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 24px;
+  will-change: transform;
+}
+
+/* Infinite Scrolling Animations */
+.marquee-track-left .marquee-content {
+  animation: scroll-left 55s linear infinite;
+}
+
+.marquee-track-right .marquee-content {
+  animation: scroll-right 55s linear infinite;
+}
+
+/* Pause marquee on hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-100% - 24px)); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(calc(-100% - 24px)); }
+  100% { transform: translateX(0); }
+}
+
+/* Premium Card Design for Marquee */
 .testi-card {
-  background: var(--bg-white); border-radius: var(--radius-lg);
-  padding: 32px 28px; border: 1px solid var(--border);
-  box-shadow: var(--shadow-xs); transition: var(--transition);
-  display: flex; flex-direction: column; gap: 16px;
+  width: 440px; /* Fixed width for consistent horizontal scrolling layout */
+  flex-shrink: 0;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
 }
-.testi-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-.testi-stars  { display: flex; gap: 3px; color: #f59e0b; font-size: 0.9rem; }
-.testi-quote  { font-size: 1.8rem; color: rgba(232,0,14,0.25); line-height: 1; }
-.testi-card p { font-size: 0.9rem; color: var(--text-body); line-height: 1.75; flex: 1; }
-.testi-footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: auto; }
-.testi-author strong { display: block; font-size: 0.92rem; font-weight: 700; color: var(--text-dark); }
-.testi-author span   { font-size: 0.78rem; color: var(--text-muted); }
+
+/* Card hover effect inside marquee */
+.testi-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(232, 0, 14, 0.25);
+  box-shadow: var(--shadow-md);
+  z-index: 15;
+}
+
+.testi-stars {
+  display: flex;
+  gap: 3px;
+  color: #f59e0b;
+  font-size: 0.9rem;
+}
+
+.testi-quote {
+  font-size: 1.6rem;
+  color: rgba(232, 0, 14, 0.18);
+  line-height: 1;
+  position: absolute;
+  top: 24px;
+  right: 28px;
+}
+
+.testi-card p {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.testi-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+}
+
+.testi-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Initials Avatar Letter Style */
+.testi-avatar-letter {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.testi-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testi-author strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.testi-author span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
 .testi-tag {
-  font-size: 0.72rem; font-weight: 600; color: var(--red);
-  white-space: nowrap; padding: 3px 10px;
-  background: rgba(232,0,14,0.08); border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--red);
+  white-space: nowrap;
+  padding: 4px 10px;
+  background: rgba(232, 0, 14, 0.06);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(232, 0, 14, 0.1);
 }
+
 .testi-social-proof {
-  display: flex; align-items: center; gap: 16px; justify-content: center;
-  padding: 20px 28px; background: var(--bg-white); border-radius: var(--radius-full);
-  border: 1px solid var(--border); width: fit-content; margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  padding: 20px 28px;
+  background: var(--bg-white);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  width: fit-content;
+  margin: 0 auto;
   box-shadow: var(--shadow-sm);
 }
+
 .proof-avatars { display: flex; align-items: center; }
 .proof-avatars img {
-  width: 36px; height: 36px; border-radius: 50%;
-  border: 2px solid #fff; object-fit: cover; margin-left: -8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  margin-left: -8px;
 }
 .proof-avatars img:first-child { margin-left: 0; }
+
 .proof-more {
-  width: 36px; height: 36px; border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   background: linear-gradient(135deg, var(--red), var(--red-dark));
-  color: #fff; font-size: 0.7rem; font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  margin-left: -8px; border: 2px solid #fff;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+  border: 2px solid #fff;
 }
+
 .proof-text strong { display: block; font-size: 0.92rem; font-weight: 700; color: var(--text-dark); }
 .proof-text span   { font-size: 0.78rem; color: var(--text-muted); }
+
+/* Responsive Adjustments for Marquee */
+@media (max-width: 900px) {
+  .marquee-container::before,
+  .marquee-container::after { width: 120px; }
+  .testi-card { width: 350px; }
+}
+
+@media (max-width: 640px) {
+  .marquee-container::before,
+  .marquee-container::after { width: 60px; }
+  .testi-card { width: 300px; }
+}
 
 /* ── CONTACT ── */
 .contact { padding: 100px 0; background: var(--bg-white); }

@@ -25,7 +25,7 @@ function addRevealClasses() {
   document.querySelectorAll(".why-card").forEach((el, i) => {
     el.classList.add("fade-up", `d${Math.min(i + 1, 6)}`);
   });
-  document.querySelectorAll(".testi-card").forEach((el, i) => {
+  document.querySelectorAll(".marquee-track").forEach((el, i) => {
     el.classList.add("fade-up", `d${i + 1}`);
   });
   document.querySelectorAll(".cinfo-card").forEach((el, i) => {
