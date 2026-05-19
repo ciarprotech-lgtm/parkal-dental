@@ -78,6 +78,45 @@ body.dark .iso-badge { background: var(--bg-white); }
 
 /* ── SERVICES ── */
 .services { padding: 100px 0; background: var(--bg); }
+.services-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.filter-btn {
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  color: var(--text-dark);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: var(--shadow-xs);
+  cursor: none;
+}
+.filter-btn:hover {
+  border-color: rgba(232,0,14,0.3);
+  color: var(--red);
+  transform: translateY(-2px);
+}
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--shadow-red);
+}
+body.dark .filter-btn {
+  background: var(--bg-white);
+  border-color: var(--border);
+}
+body.dark .filter-btn.active {
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: #fff;
+}
 .services-grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 16px; margin-bottom: 48px;
@@ -85,9 +124,13 @@ body.dark .iso-badge { background: var(--bg-white); }
 .svc-card {
   background: var(--bg-white); border-radius: var(--radius-lg);
   padding: 28px 22px; border: 1px solid var(--border);
-  transition: var(--transition); cursor: default; text-align: center;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: default; text-align: center;
+  will-change: opacity, transform;
+  opacity: 1;
+  transform: scale(1);
 }
-.svc-card:hover { box-shadow: var(--shadow-md); border-color: rgba(232,0,14,0.3); transform: translateY(-4px); }
+.svc-card:hover { box-shadow: var(--shadow-md); border-color: rgba(232,0,14,0.3); transform: translateY(-4px) scale(1.02); }
 .svc-card.featured { border-color: rgba(232,0,14,0.4); box-shadow: var(--shadow-sm); }
 .svc-icon {
   width: 52px; height: 52px; border-radius: 50%;

@@ -300,66 +300,179 @@
         deserve.
       </p>
     </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="services-filter">
+      <button class="filter-btn active" data-filter="all">All Treatments</button>
+      <button class="filter-btn" data-filter="preventive">Preventive &amp; Kids</button>
+      <button class="filter-btn" data-filter="aesthetics">Cosmetics &amp; Veneers</button>
+      <button class="filter-btn" data-filter="ortho">Orthodontics &amp; Aligners</button>
+      <button class="filter-btn" data-filter="restorative">Restorations &amp; Implants</button>
+      <button class="filter-btn" data-filter="special">Specialized &amp; Surgery</button>
+    </div>
+
     <div class="services-grid">
-      <div class="svc-card featured">
-        <div class="svc-icon cyan-bg"><i class="fas fa-wave-square"></i></div>
-        <h3 class="svc-title cyan-text">Root Canal Treatments</h3>
-        <p>Advanced endodontic therapy using latest techniques</p>
+      <!-- 1. Teeth whitening -->
+      <div class="svc-card aesthetics">
+        <div class="svc-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3 class="svc-title">Teeth Whitening</h3>
+        <p>Professional bleaching procedures to safely and dramatically brighten your teeth by several shades.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-circle-dot"></i></div>
-        <h3 class="svc-title">Filling &amp; Restorative Treatment</h3>
-        <p>Composite and ceramic restorations for natural-looking results</p>
+      <!-- 2. Bonding -->
+      <div class="svc-card aesthetics">
+        <div class="svc-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3 class="svc-title">Bonding</h3>
+        <p>Composite resin matching your tooth color to quickly repair minor chips, cracks, or gaps.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-tooth"></i></div>
-        <h3 class="svc-title">Implants</h3>
-        <p>Titanium implants for permanent tooth replacement</p>
+      <!-- 3. Check-ups -->
+      <div class="svc-card preventive">
+        <div class="svc-icon"><i class="fa-solid fa-notes-medical"></i></div>
+        <h3 class="svc-title">Check-Ups</h3>
+        <p>Comprehensive diagnostics and examinations to catch issues early and maintain oral wellness.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-crown"></i></div>
-        <h3 class="svc-title">Crowns, Bridges &amp; Inlays</h3>
-        <p>Custom prosthetics for complete smile restoration</p>
+      <!-- 4. Cosmetic procedures -->
+      <div class="svc-card aesthetics">
+        <div class="svc-icon"><i class="fa-solid fa-face-smile"></i></div>
+        <h3 class="svc-title">Cosmetic Procedures</h3>
+        <p>Tailored aesthetic enhancements to design and construct your dream smile line.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-bolt"></i></div>
+      <!-- 5. Dental implants -->
+      <div class="svc-card restorative">
+        <div class="svc-icon"><i class="fa-solid fa-tooth"></i></div>
+        <h3 class="svc-title">Dental Implants</h3>
+        <p>Permanent screw-retained restorations replacing missing teeth from root to crown.</p>
+      </div>
+      <!-- 6. Dentures & bridges -->
+      <div class="svc-card restorative">
+        <div class="svc-icon"><i class="fa-solid fa-teeth"></i></div>
+        <h3 class="svc-title">Dentures &amp; Bridges</h3>
+        <p>High-grade partial or complete prosthetics to restore masticatory function and speech.</p>
+      </div>
+      <!-- 7. Emergency care -->
+      <div class="svc-card special">
+        <div class="svc-icon"><i class="fa-solid fa-kit-medical"></i></div>
+        <h3 class="svc-title">Emergency Care</h3>
+        <p>Urgent dental interventions for severe trauma, acute pain, bleeding, or dislodged restorations.</p>
+      </div>
+      <!-- 8. Extractions -->
+      <div class="svc-card special">
+        <div class="svc-icon"><i class="fa-solid fa-teeth-open"></i></div>
+        <h3 class="svc-title">Extractions</h3>
+        <p>Gentle removal of severely compromised, crowded, or unsalvageable teeth to preserve health.</p>
+      </div>
+      <!-- 9. Fillings and sealants -->
+      <div class="svc-card restorative">
+        <div class="svc-icon"><i class="fa-solid fa-fill-drip"></i></div>
+        <h3 class="svc-title">Fillings &amp; Sealants</h3>
+        <p>Composite fillings to restore decayed areas and sealants to shield vulnerable grooves.</p>
+      </div>
+      <!-- 10. Laser dentistry -->
+      <div class="svc-card special">
+        <div class="svc-icon"><i class="fa-solid fa-bolt"></i></div>
         <h3 class="svc-title">Laser Dentistry</h3>
-        <p>Minimally invasive treatments with advanced laser technology</p>
+        <p>Minimally invasive therapies utilizing modern lasers for precise gum surgery and disinfection.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
-        <h3 class="svc-title">Cosmetic Dentistry</h3>
-        <p>Veneers, whitening, and smile makeovers</p>
+      <!-- 11. Mouth guards -->
+      <div class="svc-card preventive">
+        <div class="svc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 class="svc-title">Mouth Guards</h3>
+        <p>Custom-fitted protective guards for sports and night guards to prevent teeth grinding (bruxism).</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-triangle-exclamation"></i></div>
-        <h3 class="svc-title">Wisdom Teeth</h3>
-        <p>Safe extraction and management of wisdom teeth</p>
+      <!-- 12. Oral surgery -->
+      <div class="svc-card special">
+        <div class="svc-icon"><i class="fa-solid fa-syringe"></i></div>
+        <h3 class="svc-title">Oral Surgery</h3>
+        <p>Complex surgical procedures involving hard and soft tissues of the mouth, jaws, and face.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-heart"></i></div>
-        <h3 class="svc-title">Periodontal Diseases</h3>
-        <p>Comprehensive gum disease treatment and prevention</p>
+      <!-- 13. Paediatrics -->
+      <div class="svc-card preventive">
+        <div class="svc-icon"><i class="fa-solid fa-baby"></i></div>
+        <h3 class="svc-title">Paediatrics</h3>
+        <p>Specialized, friendly pediatric care focusing on dental development in infants and pre-teens.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-shield-halved"></i></div>
-        <h3 class="svc-title">Sensitive Teeth</h3>
-        <p>Specialized care for tooth sensitivity issues</p>
+      <!-- 14. Root canals -->
+      <div class="svc-card restorative">
+        <div class="svc-icon"><i class="fa-solid fa-wave-square"></i></div>
+        <h3 class="svc-title">Root Canals</h3>
+        <p>Meticulous cleaning of infected pulp pathways to save natural teeth and relieve severe pain.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-stethoscope"></i></div>
-        <h3 class="svc-title">Essential Care</h3>
-        <p>Routine cleanings, checkups, and preventive care</p>
+      <!-- 15. Teeth cleaning -->
+      <div class="svc-card preventive">
+        <div class="svc-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+        <h3 class="svc-title">Teeth Cleaning</h3>
+        <p>Professional scaling and polishing to remove stubborn plaque, tartar, and surface stains.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-droplet"></i></div>
-        <h3 class="svc-title">Tooth Decay &amp; Fluoride</h3>
-        <p>Cavity prevention and fluoride treatments</p>
+      <!-- 16. Teeth reshaping -->
+      <div class="svc-card aesthetics">
+        <div class="svc-icon"><i class="fa-solid fa-crop-simple"></i></div>
+        <h3 class="svc-title">Teeth Reshaping</h3>
+        <p>Subtle enamel recontouring to optimize the length, contour, and alignment of individual teeth.</p>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon"><i class="fas fa-face-smile"></i></div>
-        <h3 class="svc-title">Pediatric Dentistry</h3>
-        <p>Gentle dental care for children and teens</p>
+      <!-- 17. Veneers & crowns -->
+      <div class="svc-card aesthetics">
+        <div class="svc-icon"><i class="fa-solid fa-crown"></i></div>
+        <h3 class="svc-title">Veneers &amp; Crowns</h3>
+        <p>Thin porcelain shells and custom caps to cover imperfections and fortify damaged teeth.</p>
+      </div>
+      <!-- 18. X-ray -->
+      <div class="svc-card preventive">
+        <div class="svc-icon"><i class="fa-solid fa-bone"></i></div>
+        <h3 class="svc-title">X-Ray</h3>
+        <p>Advanced low-radiation digital imaging to inspect bones, roots, and hidden dental structures.</p>
+      </div>
+      <!-- 19. INVISALIGN -->
+      <div class="svc-card ortho">
+        <div class="svc-icon"><i class="fa-solid fa-teeth"></i></div>
+        <h3 class="svc-title">INVISALIGN</h3>
+        <p>Premium clear aligner therapy using SmartTrack material to straighten teeth virtually invisibly.</p>
+      </div>
+      <!-- 20. FACIAL AND JAW PAIN THERAPIES -->
+      <div class="svc-card special">
+        <div class="svc-icon"><i class="fa-solid fa-head-side-virus"></i></div>
+        <h3 class="svc-title">Facial &amp; Jaw Pain Therapies</h3>
+        <p>Specialized clinical therapy for TMJ dysfunctions, teeth clenching, and muscular jaw pain.</p>
+      </div>
+      <!-- 21. Braces metal ceramic self ligating -->
+      <div class="svc-card ortho">
+        <div class="svc-icon"><i class="fa-solid fa-grip-lines"></i></div>
+        <h3 class="svc-title">Braces (Metal, Ceramic, Self-Ligating)</h3>
+        <p>Comprehensive orthodontic options including low-friction self-ligating brackets and ceramic braces.</p>
+      </div>
+      <!-- 22. aligners -->
+      <div class="svc-card ortho">
+        <div class="svc-icon"><i class="fa-solid fa-rotate"></i></div>
+        <h3 class="svc-title">Aligners</h3>
+        <p>Custom thermoplastic trays designed to sequentially shift your teeth into alignment.</p>
+      </div>
+      <!-- 23. wisdom teeth removal -->
+      <div class="svc-card special">
+        <div class="svc-icon"><i class="fa-solid fa-circle-minus"></i></div>
+        <h3 class="svc-title">Wisdom Teeth Removal</h3>
+        <p>Expert extraction of impacted or poorly aligned third molars to prevent crowding and infection.</p>
+      </div>
+      <!-- 24. root canal treatment -->
+      <div class="svc-card restorative">
+        <div class="svc-icon"><i class="fa-solid fa-microscope"></i></div>
+        <h3 class="svc-title">Root Canal Treatment</h3>
+        <p>Advanced endodontic therapy utilizing micro-instrumentation for long-term clinical success.</p>
+      </div>
+      <!-- 25. implants -->
+      <div class="svc-card restorative">
+        <div class="svc-icon"><i class="fa-solid fa-anchor"></i></div>
+        <h3 class="svc-title">Implants</h3>
+        <p>Titanium post placements to establish a solid foundation for crowns, bridges, and dentures.</p>
+      </div>
+      <!-- 26. child dentistry -->
+      <div class="svc-card preventive">
+        <div class="svc-icon"><i class="fa-solid fa-face-laugh-beam"></i></div>
+        <h3 class="svc-title">Child Dentistry</h3>
+        <p>Gentle dental checkups and cavity prevention in a fun, fear-free environment for young kids.</p>
+      </div>
+      <!-- 27. ceramic zirconia crowns bridges -->
+      <div class="svc-card restorative">
+        <div class="svc-icon"><i class="fa-solid fa-gem"></i></div>
+        <h3 class="svc-title">Ceramic Zirconia Crowns &amp; Bridges</h3>
+        <p>Premium, biocompatible metal-free zirconia restorations offering unmatched strength and aesthetics.</p>
       </div>
     </div>
     <div class="svc-cta">
@@ -1047,7 +1160,7 @@
             <ul>
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Our Services</a></li>
-              <li><a href="#why">Meet Our Team</a></li>
+              <li><a href="#why">Why Us</a></li>
               <li><a href="#testimonials">Patient Reviews</a></li>
               <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -1057,10 +1170,10 @@
             <ul>
               <li><a href="#services">Root Canal Treatment</a></li>
               <li><a href="#services">Dental Implants</a></li>
-              <li><a href="#services">Cosmetic Dentistry</a></li>
-              <li><a href="#services">Laser Dentistry</a></li>
-              <li><a href="#services">Periodontal Care</a></li>
-              <li><a href="#services">Emergency Care</a></li>
+              <li><a href="#services">Invisalign &amp; Aligners</a></li>
+              <li><a href="#services">Braces (Metal/Ceramic)</a></li>
+              <li><a href="#services">Ceramic Zirconia Crowns</a></li>
+              <li><a href="#services">Teeth Whitening</a></li>
             </ul>
           </div>
           <div class="footer-col">

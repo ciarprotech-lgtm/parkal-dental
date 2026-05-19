@@ -165,3 +165,55 @@ themeBtn.addEventListener("click", () => {
     : '<i class="fas fa-moon"></i>';
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
+
+/* ── Services Filter ── */
+const filterBtns = document.querySelectorAll(".filter-btn");
+const svcCards = document.querySelectorAll(".svc-card");
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filterVal = btn.getAttribute("data-filter");
+
+    svcCards.forEach((card) => {
+      if (filterVal === "all" || card.classList.contains(filterVal)) {
+        card.style.display = "block";
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "scale(1)";
+          }, 10);
+        });
+      } else {
+        card.style.opacity = "0";
+        card.style.transform = "scale(0.85)";
+        setTimeout(() => {
+          card.style.display = "none";
+        }, 300);
+      }
+    });
+  });
+});
+
+// Link "View All Services" button to activate the "All Treatments" filter
+const viewAllBtn = document.querySelector('.svc-cta .btn-outline[href="#services"]');
+if (viewAllBtn) {
+  viewAllBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allBtn) {
+      allBtn.click();
+    }
+    const target = document.querySelector("#services");
+    if (target) {
+      const navbarEl = document.getElementById("navbar");
+      const navH = navbarEl ? navbarEl.offsetHeight : 80;
+      window.scrollTo({
+        top: target.offsetTop - navH - 16,
+        behavior: "smooth"
+      });
+    }
+  });
+}
