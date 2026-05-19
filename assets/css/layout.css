@@ -355,9 +355,9 @@ body.dark .mob-drawer-head { background: linear-gradient(135deg, #1E1E1E, #20080
   .loader-logo-wrap span { font-size: 1rem; }
 }
 
-@media (hover: none) {
-  .cursor-dot, .cursor-ring { display: none; }
-  body   { cursor: auto; }
-  button { cursor: pointer; }
-  a      { cursor: pointer; }
+@media (max-width: 1024px), (hover: none) {
+  .cursor-dot, .cursor-ring { display: none !important; }
+  body { cursor: auto !important; }
+  button, .filter-btn { cursor: pointer !important; }
+  a { cursor: pointer !important; }
 }

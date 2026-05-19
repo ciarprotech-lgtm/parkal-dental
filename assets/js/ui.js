@@ -19,10 +19,13 @@ document.body.style.overflow = "hidden";
 const dot = document.getElementById("cursorDot");
 const ring = document.getElementById("cursorRing");
 
-const isTouchDevice = window.matchMedia("(hover: none)").matches;
+const isMobileDevice = window.matchMedia("(max-width: 1024px)").matches || 
+                       window.matchMedia("(hover: none)").matches || 
+                       ('ontouchstart' in window) || 
+                       (navigator.maxTouchPoints > 0);
 
-if (isTouchDevice) {
-  /* Hide cursor elements entirely on touch/mobile devices */
+if (isMobileDevice) {
+  /* Hide cursor elements entirely on touch/mobile/tablet devices */
   if (dot) dot.style.display = "none";
   if (ring) ring.style.display = "none";
 } else {
